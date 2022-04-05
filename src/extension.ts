@@ -5,9 +5,11 @@ export function activate(context: vscode.ExtensionContext) {
 
 	console.log('Congratulations, your extension "mysql-vcs" is now active!');
 
+	console.log(context);
+
 	context.subscriptions.push(
 		vscode.commands.registerCommand('mysql-vcs.helloWorld', () => {
-			HelloWorldPanel.createOrShow(context.extensionUri)
+			HelloWorldPanel.createOrShow(context.extensionUri);
 		})
 	);
 
